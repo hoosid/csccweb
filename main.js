@@ -3,7 +3,7 @@ let curPlayer;
 
 let curHeldPiece;
 let curHeldPieceStartingPosition;
-
+//function t3amer les photo 
 function startGame() {
     const starterPosition = [['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
     ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
@@ -61,6 +61,7 @@ function getPieceImageSource(piece) {
         case 'p': return 'white_pawn.png';
     }
 }
+//cette function pour march les pion
 
 function setPieceHoldEvents() {
     let mouseX, mouseY = 0;
@@ -96,7 +97,7 @@ function setPieceHoldEvents() {
             }
         });
     }
-        
+        //click pour place le pion
     document.addEventListener('mouseup', function(event) {
         window.clearInterval(movePieceInterval);
 
@@ -335,7 +336,7 @@ function isFriendlyPieceOnEndingPosition(endingPosition) {
         return false;
     }
 }
-
+//function pour marche on position 
 function isEnemyPieceOnEndingPosition(endingPosition) {
     const destinationSquare = document.getElementById(`${endingPosition[0] + 1}${endingPosition[1] + 1}`);
 
